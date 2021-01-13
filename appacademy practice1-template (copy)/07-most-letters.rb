@@ -5,6 +5,17 @@
 # Difficulty: medium.
 
 def nearby_az(string)
+
+	(0..string.length-1).each do |w1|
+		(0..string.length).each { |w2| return true if (string[w2] == "z" && string[w1] == "a") && (w2 - w1) <= 3 && (w2 - w1) > 0 }
+				
+		
+
+	end
+
+	false
+
+
 end
 
 # These are tests to check that your code is working. After writing
