@@ -7,6 +7,22 @@
 # Difficulty: easy.
 
 def longest_word(sentence)
+
+	return sentence if sentence.split(" ").length == 1
+
+
+	large = " "
+
+	sentence.split(" ").each { |word| large = word	if word.length > large.length }
+
+	large
+
+
+
+
+
+
+
 end
 
 # These are tests to check that your code is working. After writing
