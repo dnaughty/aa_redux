@@ -7,9 +7,8 @@ def time_conversion(minutes)
 	hrs = (minutes / 60)
 	mins = (minutes  % 60)
 
-	if mins < 10
-		mins = "#{mins}0"
-	end
+	mins = "#{mins}0" if mins < 10
+		
 
 	"#{hrs}:#{mins}"
 end
