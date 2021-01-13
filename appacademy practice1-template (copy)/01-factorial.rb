@@ -6,6 +6,14 @@
 # Difficulty: easy.
 
 def factorial(n)
+
+	return 1 if n < 2
+
+	n *= factorial(n - 1)
+
+	
+
+
 end
 
 # These are tests to check that your code is working. After writing
@@ -26,3 +34,6 @@ puts(
 puts(
   'factorial(4) == 24: ' + (factorial(4) == 24).to_s
 )
+
+
+puts factorial(4)

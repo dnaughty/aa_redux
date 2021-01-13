@@ -6,6 +6,13 @@
 # Difficulty: easy.
 
 def reverse(string)
+	reversed_string = ""
+
+	return "" if string.length <= 0
+	
+	reversed_string << reverse(string[-1])
+
+	reversed_string
 end
 
 # These are tests to check that your code is working. After writing
@@ -20,3 +27,5 @@ puts(
 puts(
   'reverse("") == "": ' + (reverse("") == "").to_s
 )
+
+puts reverse("abc") 
