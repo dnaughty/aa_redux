@@ -8,10 +8,7 @@
 def reverse(string)
 	reversed_string = ""
 
-	return "" if string.length <= 0
-	
-	reversed_string << reverse(string[-1])
-
+	string.split("").each { |x| reversed_string = x + reversed_string }
 	reversed_string
 end
 
