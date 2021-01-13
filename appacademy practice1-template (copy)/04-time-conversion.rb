@@ -4,6 +4,14 @@
 # Difficulty: easy.
 
 def time_conversion(minutes)
+	hrs = (minutes / 60)
+	mins = (minutes  % 60)
+
+	if mins < 10
+		mins = "#{mins}0"
+	end
+
+	"#{hrs}:#{mins}"
 end
 
 # These are tests to check that your code is working. After writing
@@ -12,3 +20,4 @@ end
 puts('time_conversion(15) == "0:15": ' + (time_conversion(15) == '0:15').to_s)
 puts('time_conversion(150) == "2:30": ' + (time_conversion(150) == '2:30').to_s)
 puts('time_conversion(360) == "6:00": ' + (time_conversion(360) == '6:00').to_s)
+puts time_conversion(360)
