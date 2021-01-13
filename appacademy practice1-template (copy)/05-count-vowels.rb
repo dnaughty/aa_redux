@@ -4,7 +4,13 @@
 #
 # Difficulty: easy.
 
+def count_vowels(string)
 
+	count = 0
+
+	string.each_char { |char| count += 1 if char.match(/[aeiou]/) }
+	count 
+end
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
