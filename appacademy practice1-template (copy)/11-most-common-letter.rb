@@ -5,6 +5,14 @@
 # Difficulty: medium.
 
 def most_common_letter(string)
+
+	count = Hash.new(0)
+
+	string.each_char do |x|
+		count[x] += 1
+	end
+
+	count.sort[0]
 end
 
 # These are tests to check that your code is working. After writing
@@ -18,3 +26,5 @@ puts(
   'most_common_letter("abbab") == ["b", 3]: ' +
   (most_common_letter('abbab') == ['b', 3]).to_s
 )
+
+p most_common_letter("abca")
