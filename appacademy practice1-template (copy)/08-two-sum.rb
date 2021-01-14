@@ -5,6 +5,18 @@
 # Difficulty: medium.
 
 def two_sum(nums)
+
+	positions = []
+	(0..nums.length-1).each do |n1|
+		(1..nums.length).each do |n2|
+			if n1 + n2 == 0
+				positions << [n1,n2]
+			end
+		end
+	end
+
+	positions
+
 end
 
 # These are tests to check that your code is working. After writing
@@ -16,3 +28,5 @@ puts(
 puts(
   'two_sum([1, 3, 5]) == nil: ' + (two_sum([1, 3, 5]) == nil).to_s
 )
+
+p two_sum([1, 3, 5, -3])
